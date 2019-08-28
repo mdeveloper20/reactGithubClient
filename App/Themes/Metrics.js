@@ -28,6 +28,11 @@ const metrics = {
     medium: 40,
     large: 60,
     logo: 200
+  },
+  viewWidths:{
+    full:'90%',
+    half:'50%',
+    small:'25%'
   }
 }
 

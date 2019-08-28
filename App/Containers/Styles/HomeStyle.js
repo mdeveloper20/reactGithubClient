@@ -1,8 +1,10 @@
 import {StyleSheet} from 'react-native'
-import {Fonts, Metrics, Colors} from '../../Themes/'
+import {Fonts, Metrics, Colors,ApplicationStyles} from '../../Themes/'
+
 
 
 export default StyleSheet.create({
+  ...ApplicationStyles.screen,
   applicationView: {
     flex: 1
   },
@@ -10,7 +12,7 @@ export default StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems:'center',
-    backgroundColor: Colors.facebook
+    backgroundColor: Colors.silver
   },
   welcome: {
     fontSize: 20,
@@ -18,9 +20,14 @@ export default StyleSheet.create({
     fontFamily: Fonts.type.base,
     margin: Metrics.baseMargin
   },
-  myImage: {
-    width: 200,
-    height: 200,
-    alignSelf: 'center'
-  }
+  logo: {
+    height: Metrics.images.logo,
+    width: Metrics.images.logo,
+    resizeMode: 'contain'
+  },
+  input: {
+    width:Metrics.viewWidths.full,
+    alignSelf:'center',
+},
+
 })
