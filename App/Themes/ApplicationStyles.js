@@ -56,6 +56,14 @@ const ApplicationStyles = {
             width: Metrics.images.logo,
             resizeMode: 'contain'
         },
+        fullBack: {
+            flex: 1,
+            resizeMode: 'cover',
+        },
+        logoutButton:{
+            margin:Metrics.doubleBaseMargin,
+        },
+
     },
     darkLabelContainer: {
         padding: Metrics.smallMargin,

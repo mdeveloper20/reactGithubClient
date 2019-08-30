@@ -17,6 +17,7 @@ persistStore(
     null,
     () => {
         store.getState() // if you want to get restoredState
+
     }
 )
 

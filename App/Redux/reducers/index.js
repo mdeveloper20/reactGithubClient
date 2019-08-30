@@ -8,4 +8,4 @@ const config = {
       storage
 }
 
-export default persistCombineReducers(config, {user,setting})
+export default persistCombineReducers(config, {user,setting,rehydrated})

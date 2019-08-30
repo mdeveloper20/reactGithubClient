@@ -30,7 +30,9 @@ const metrics = {
     logo: 200
   },
   viewWidths:{
+    'max':'100%',
     full:'90%',
+    big:'85%',
     half:'50%',
     small:'25%'
   }

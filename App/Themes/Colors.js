@@ -13,7 +13,7 @@ const colors = {
   panther: '#161616',
   charcoal: '#595959',
   coal: '#2d2d2d',
-  bloodOrange: '#fb5f26',
+  bloodOrange: '#40904a',
   snow: 'white',
   ember: 'rgba(164, 0, 48, 0.5)',
   fire: '#e73536',
