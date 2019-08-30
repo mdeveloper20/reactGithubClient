@@ -1,14 +1,10 @@
-import {LOGOUT_USER, PURGE, SAVE_EMAIL, SAVE_PASSWORD, SET_USER, UPDATE_USER_PASS} from "./type";
+import {LOGOUT_USER, PURGE, SAVE_EMAIL, SAVE_PASSWORD, SAVE_USER, SET_USER, UPDATE_USER_PASS} from "./type";
 
 
-export const saveEmail = email => ({
-    type: SAVE_EMAIL,
-    email
-});
-
-
-export const savePassword = password => ({
-    type: SAVE_PASSWORD,
+export const saveUser = (name,email,password) => ({
+    type: SAVE_USER,
+    name,
+    email,
     password
 });
 
@@ -29,15 +25,6 @@ export const savePassword = password => ({
 
 
 
-
-
-export const setUser = user => ({
-    type: SET_USER,
-    user: user
-});
-export const updateUserPassword = () => ({
-    type: UPDATE_USER_PASS
-});
 export const logoutUser = () => ({
     type: LOGOUT_USER
 });

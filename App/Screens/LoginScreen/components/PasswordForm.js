@@ -22,6 +22,8 @@ export default class PasswordForm extends Component {
                     placeholder='Your Github password'
                     errorMessage={this.state.password.error}
                     onChangeText={this.onPasswordChange}
+                    textContentType="password"
+                    secureTextEntry
                 />
 
                 <Button

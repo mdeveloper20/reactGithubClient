@@ -1,4 +1,4 @@
-import {LOGOUT_USER, SAVE_EMAIL, SAVE_PASSWORD, SET_USER, UPDATE_USER_MOBILE, UPDATE_USER_PASS} from "../actions/type";
+import {LOGOUT_USER, SAVE_USER} from "../actions/type";
 
 const initialState = {
     id: null,
@@ -10,16 +10,12 @@ const initialState = {
 
 export default (user = (state = initialState, action = {}) => {
     switch (action.type) {
-        case SAVE_EMAIL:
-            const {email} = action;
+        case SAVE_USER:
+            const {name,email,password} = action;
             return {
                 ...state,
-                email
-            };
-        case SAVE_PASSWORD:
-            const {password} = action;
-            return {
-                ...state,
+                name,
+                email,
                 password
             };
         case LOGOUT_USER:

@@ -23,6 +23,8 @@ export default class EmailForm extends Component {
                     placeholder='Your Github email address'
                     errorMessage={this.state.email.error}
                     onChangeText={this.onEmailChange}
+                    textContentType="username"
+
                 />
 
                 <Button
