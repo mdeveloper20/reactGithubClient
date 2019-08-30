@@ -4,6 +4,8 @@ import {connect} from "react-redux";
 import styles from "./style"
 import {Button, Image, Input, Text} from 'react-native-elements';
 import Images from "../../Themes/Images";
+import {logoutUser} from "../../Redux/actions";
+import {Actions} from 'react-native-router-flux';
 
 class HomeScreen extends Component {
 
@@ -46,10 +48,9 @@ class HomeScreen extends Component {
 
                         title="Logout"
                         type="solid"
-                        onPress={this.onSubmitClick}
+                        onPress={this.onLogoutClick}
                     />
                 </View>
-
 
 
             </View>
@@ -64,6 +65,10 @@ class HomeScreen extends Component {
         this.setState({repo})
     }
 
+    onLogoutClick = async () => {
+        await this.props.logoutUser();
+        Actions.reset('login');
+    }
 
 }
 
@@ -74,7 +79,11 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-    return {};
+    return {
+        logoutUser: () => {
+            dispatch(logoutUser());
+        }
+    };
 }
 
 

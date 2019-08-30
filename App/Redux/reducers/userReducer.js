@@ -23,6 +23,7 @@ export default (user = (state = initialState, action = {}) => {
                 id: null,
                 name: null,
                 email: null,
+                password:null
             };
         default:
             return state;

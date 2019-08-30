@@ -27,14 +27,20 @@ class SplashScreen extends Component {
             }
         } else {
 
-            Actions.login();
+            setTimeout(()=>Actions.reset('login'),2000)//make a delay to show splash screen
         }
     }
 
-    render() {
-        if(this.props.rehydrated){
+    componentDidUpdate(prevProps) {
+        if (this.props.rehydrated !== prevProps.rehydrated) {
             this.checkUser();
         }
+    }
+
+
+
+    render() {
+
         return (
             <View style={styles.mainContainer}>
                 <Image
@@ -50,7 +56,7 @@ class SplashScreen extends Component {
 
 
     onDialogOkPress = () => {
-        Actions.login();
+        Actions.reset('login');
     };
 
 
@@ -64,7 +70,7 @@ class SplashScreen extends Component {
 
     onLoginSucceed = async (json) => {
         //go to home page
-        Actions.replace('root');
+        Actions.reset('home');
 
     }
 

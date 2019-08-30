@@ -9,6 +9,7 @@ import PasswordForm from "./components/PasswordForm";
 import DialogAlert from "../../Tools/DialogAlert";
 import {saveUser} from "../../Redux/actions";
 import {requrestLoginFromApi} from "../../APIs/loginRequest";
+import {Actions} from 'react-native-router-flux';
 
 class LoginScreen extends Component {
     state = {
@@ -101,7 +102,7 @@ class LoginScreen extends Component {
 
     onLoginSucceed = async (json) => {
         await this.props.saveUser(json.login,this.state.loginEmail,this.state.loginPassword)
-
+        Actions.reset('home');// send user to home page and prevent getting back to the login page
     }
 }
 

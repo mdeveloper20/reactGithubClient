@@ -1,7 +1,7 @@
-import {LOGOUT_USER, PURGE, SAVE_EMAIL, SAVE_PASSWORD, SAVE_USER, SET_USER, UPDATE_USER_PASS} from "./type";
+import {LOGOUT_USER, PURGE, SAVE_USER} from "./type";
 
 
-export const saveUser = (name,email,password) => ({
+export const saveUser = (name, email, password) => ({
     type: SAVE_USER,
     name,
     email,
@@ -9,25 +9,11 @@ export const saveUser = (name,email,password) => ({
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+export const purge = () => ({
+    type: PURGE
+});
 
 
 export const logoutUser = () => ({
     type: LOGOUT_USER
-});
-export const purgeStorage = () => ({
-    type: PURGE
 });

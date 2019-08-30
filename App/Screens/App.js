@@ -26,12 +26,8 @@ export default class App extends Component {
             <Provider store={store}>
                 <RouterWithRedux>
                     <ThemeProvider >
+                        <Scene hideNavBar={true}  key="home" component={HomeScreen} />
 
-                        <Stack hideNavBar={true}  key="root">
-
-                            <Scene key="home" component={HomeScreen} />
-
-                        </Stack>
                         <Scene hideNavBar={true} key="splash" component={SplashScreen} initial/>
                         <Scene hideNavBar={true} key="login" component={LoginScreen} />
 
