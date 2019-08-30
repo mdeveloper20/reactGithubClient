@@ -9,7 +9,9 @@ const ApplicationStyles = {
     screen: {
         mainContainer: {
             flex: 1,
-            backgroundColor: Colors.transparent
+            justifyContent: 'center',
+            alignItems: 'center',
+            backgroundColor: Colors.silver
         },
         backgroundImage: {
             position: 'absolute',
@@ -44,10 +46,16 @@ const ApplicationStyles = {
             ...Fonts.style.h2,
             fontSize: 14,
             color: Colors.text
-        },fullWidthButtons: {
-            width:Metrics.viewWidths.full,
-            margin:Metrics.smallMargin
-        }
+        },
+        fullWidthButtons: {
+            width: Metrics.viewWidths.full,
+            margin: Metrics.smallMargin
+        },
+        logo: {
+            height: Metrics.images.logo,
+            width: Metrics.images.logo,
+            resizeMode: 'contain'
+        },
     },
     darkLabelContainer: {
         padding: Metrics.smallMargin,

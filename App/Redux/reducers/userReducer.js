@@ -4,7 +4,7 @@ const initialState = {
     id: null,
     name: null,
     email: null,
-    password:""
+    password:null
 
 };
 

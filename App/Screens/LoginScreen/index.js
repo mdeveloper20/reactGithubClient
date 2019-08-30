@@ -6,10 +6,9 @@ import {Image, Text} from 'react-native-elements';
 import Images from "../../Themes/Images";
 import EmailForm from "./components/EmailForm";
 import PasswordForm from "./components/PasswordForm";
-import base64 from "react-native-base64";
-import {ROOT_URL} from "../../Config/apis";
 import DialogAlert from "../../Tools/DialogAlert";
 import {saveUser} from "../../Redux/actions";
+import {requrestLoginFromApi} from "../../APIs/loginRequest";
 
 class LoginScreen extends Component {
     state = {
@@ -21,7 +20,7 @@ class LoginScreen extends Component {
 
     render() {
         return (
-            <View style={styles.container}>
+            <View style={styles.mainContainer}>
                 <Image
                     source={Images.logo}
                     style={styles.logo}
@@ -58,7 +57,7 @@ class LoginScreen extends Component {
         })
 
         //do authentication
-        await this.requrestLoginFromApi(this.state);
+        await this.doLogin(this.state);
     }
     onBackClick = () => {
         this.setState({
@@ -73,50 +72,37 @@ class LoginScreen extends Component {
         })
     }
 
-    async requrestLoginFromApi({loginEmail, loginPassword}) {
+    async doLogin({loginEmail, loginPassword}) {
 
         try {
 
             this.setState({
                 loginStep: 2
             });
-            const authString = base64.encode(loginEmail + ":" + loginPassword);
-            let response = await fetch(`${ROOT_URL}user`, {
-                method: 'GET',
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json',
-                    'Authorization': 'Basic ' + authString
-                }
-            });
 
-            console.log(loginEmail)
-            console.log(loginPassword)
+            await requrestLoginFromApi(
+                loginEmail,
+                loginPassword,
+                this.onLoginFailed,
+                this.onLoginSucceed
+            );
 
-            console.log(response)
-            if (response.status === 200) {
-                // login successful
-
-                let json = await response.json();
-                await this.props.saveUser({name: json.login, email: loginEmail, password: loginPassword})
-
-
-                //await this.props.setUser(json);
-                //Actions.replace('root');
-            } else {
-                // login failed
-
-                this.setState({
-                    dialog: <DialogAlert message="Authentication Failed! Please try again."
-                                         onOkPress={this.onDialogOkPress}/>
-                })
-
-            }
         } catch (error) {
             console.log(error);
         }
     }
 
+    onLoginFailed = () => {
+        this.setState({
+            dialog: <DialogAlert message="Authentication Failed! Please try again."
+                                 onOkPress={this.onDialogOkPress}/>
+        })
+    }
+
+    onLoginSucceed = async (json) => {
+        await this.props.saveUser(json.login,this.state.loginEmail,this.state.loginPassword)
+
+    }
 }
 
 function mapStateToProps(state) {
