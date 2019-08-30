@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native'
-import {Fonts, Metrics, Colors,ApplicationStyles} from '../../Themes/'
+import {Fonts, Metrics, Colors,ApplicationStyles} from '../../Themes'
 
 
 
@@ -28,6 +28,7 @@ export default StyleSheet.create({
   input: {
     width:Metrics.viewWidths.full,
     alignSelf:'center',
+    marginTop:Metrics.marginVertical
 },
 
 })

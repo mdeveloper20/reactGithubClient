@@ -5,7 +5,8 @@
   "scripts": {
     "start": "react-native start",
     "android": "react-native run-android",
-    "test": "jest"
+    "test": "jest",
+    "clean": "cd android && gradlew cleanBuildCache"
   },
   "dependencies": {
     "react": "16.8.6",
@@ -16,7 +17,8 @@
     "react-redux": "^7.1.1",
     "redux": "^4.0.4",
     "redux-logger": "^3.0.6",
-    "redux-persist": "^5.10.0"
+    "redux-persist": "^5.10.0",
+    "prop-types": "latest"
   },
   "devDependencies": {
     "@babel/core": "^7.5.0",

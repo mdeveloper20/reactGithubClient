@@ -46,7 +46,7 @@ const ApplicationStyles = {
             color: Colors.text
         },fullWidthButtons: {
             width:Metrics.viewWidths.full,
-            margin:Metrics.doubleBaseMargin
+            margin:Metrics.smallMargin
         }
     },
     darkLabelContainer: {

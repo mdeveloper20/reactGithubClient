@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Home from './HomeScreen'
+import LoginScreen from './LoginScreen'
 import {Router, Scene, Stack} from "react-native-router-flux";
 import {connect, Provider} from "react-redux";
 import store from "../Redux/store";
@@ -26,7 +26,7 @@ export default class App extends Component {
 
                         <Stack hideNavBar={true}  key="root">
 
-                            <Scene key="home" component={Home}/>
+                            <Scene key="home" component={LoginScreen}/>
                         </Stack>
                     </ThemeProvider>
 

@@ -1,3 +1,13 @@
+export const SAVE_EMAIL = 'SAVE_EMAIL';
+export const SAVE_PASSWORD = 'SAVE_PASSWORD';
+
+
+
+
+
+
+
+
 export const SET_USER = 'SET_USER';
 export const UPDATE_USER_PASS = 'UPDATE_USER_PASS';
 
