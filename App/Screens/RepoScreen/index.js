@@ -13,7 +13,7 @@ import Svg from "react-native-svg";
 import Line from "react-native-svg/elements/Line";
 import moment from "moment";
 
-// TODO: pagination (fetch commits per page) is not implemented yet!
+// TODO: commits pagination (fetch commits per page) is not implemented yet!
 // for implementing pagination:
 // 1- We should define onEndReached property of FlatList object like this:
 // async onEndReached(info) {
@@ -177,6 +177,9 @@ class RepoScreen extends Component {
 
             </View>
             <Text  numberOfLines={7}>{item.message}</Text>
+            // TODO: show commit detail  is not implemented yet!
+            // It's better to popup a dialog when user clicks on each commit to show them more details about commit...
+
         </View>
     }
 
