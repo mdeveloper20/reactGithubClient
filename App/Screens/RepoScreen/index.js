@@ -177,8 +177,8 @@ export class RepoScreen extends Component {
 
             </View>
             <Text  numberOfLines={7}>{item.message}</Text>
-            // TODO: show commit detail  is not implemented yet!
-            // It's better to popup a dialog when user clicks on each commit to show them more details about commit...
+            {/*// TODO: show commit detail  is not implemented yet!*/}
+            {/*// It's better to popup a dialog when user clicks on each commit to show them more details about commit...*/}
 
         </View>
     }
