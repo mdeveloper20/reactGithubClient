@@ -10,6 +10,7 @@ import DialogAlert from "../../Tools/DialogAlert";
 import {saveUser} from "../../Redux/actions";
 import {requrestLoginFromApi} from "../../APIs/loginRequest";
 import {Actions} from 'react-native-router-flux';
+import LottieView from "lottie-react-native";
 
 class LoginScreen extends Component {
     state = {
@@ -34,8 +35,11 @@ class LoginScreen extends Component {
                 {this.state.loginStep === 1 &&
                 <PasswordForm onPasswordReceived={this.onPasswordReceived} onBackClick={this.onBackClick}/>}
 
-                {this.state.loginStep === 2 &&
-                <Text>Connecting to Github servers...</Text>}
+                {this.state.loginStep === 2 && <>
+                    <LottieView source={Images.loader} style={styles.loadingAnim} autoPlay loop/>
+
+                    <Text>Connecting to Github servers...</Text>
+                </>}
                 {this.state.dialog}
 
             </View>
@@ -101,7 +105,7 @@ class LoginScreen extends Component {
     }
 
     onLoginSucceed = async (json) => {
-        await this.props.saveUser(json.login,this.state.loginEmail,this.state.loginPassword)
+        await this.props.saveUser(json.login, this.state.loginEmail, this.state.loginPassword)
         Actions.reset('home');// send user to home page and prevent getting back to the login page
     }
 }

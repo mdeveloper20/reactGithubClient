@@ -7,13 +7,12 @@ import Images from "../../Themes/Images";
 import DialogAlert from "../../Tools/DialogAlert";
 import {requrestLoginFromApi} from "../../APIs/loginRequest";
 import {Actions} from 'react-native-router-flux';
+import LottieView from "lottie-react-native";
 
 class SplashScreen extends Component {
 
 
-
     async checkUser() {
-
 
 
         if (this.props.user.email && this.props.user.password) {
@@ -27,7 +26,7 @@ class SplashScreen extends Component {
             }
         } else {
 
-            setTimeout(()=>Actions.reset('login'),2000)//make a delay to show splash screen
+            setTimeout(() => Actions.reset('login'), 2000)//make a delay to show splash screen
         }
     }
 
@@ -38,7 +37,6 @@ class SplashScreen extends Component {
     }
 
 
-
     render() {
 
         return (
@@ -47,6 +45,8 @@ class SplashScreen extends Component {
                     source={Images.logo}
                     style={styles.logo}
                 />
+
+                <LottieView source={Images.loader} style={styles.loadingAnim} autoPlay loop/>
 
                 <Text>Loading...</Text>
 

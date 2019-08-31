@@ -63,6 +63,10 @@ const ApplicationStyles = {
         logoutButton:{
             margin:Metrics.doubleBaseMargin,
         },
+        loadingAnim:{
+            width:Metrics.icons.xxl,
+            height:Metrics.icons.xxl,
+        }
 
     },
     darkLabelContainer: {
