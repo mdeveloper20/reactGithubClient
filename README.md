@@ -13,12 +13,13 @@ React native demo application that integrated with Github V3 APIs. This project 
 ### Libraries!
 
 Here is list of some libraries that have used in the project:
-* lottie-react-native - show animations that are designed with Adobe Air
-* moment - format dates and times.
-* react-native - markdown parser done right. Fast and easy to extend.
-* react-native - great library to build mobile apps!
-* react-native-elements - cross Platform React Native UI Toolkit
-* redux- a predictable state container for JavaScript apps.
+* [lottie-react-native](https://github.com/react-native-community/lottie-react-native) - show animations that are designed with Adobe Air
+* [moment](https://github.com/moment/moment) - format dates and times.
+* [react-native](https://github.com/facebook/react-native) - great library to build mobile apps!
+* [react-native-elements](https://github.com/react-native-training/react-native-elements) - cross Platform React Native UI Toolkit
+* [redux](https://github.com/reduxjs/redux) - a predictable state container for JavaScript apps.
+* [react-native-router-flux](https://github.com/aksonov/react-native-router-flux) - the first declarative React Native router
+
 
 
 ### Installation
