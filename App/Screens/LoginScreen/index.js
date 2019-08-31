@@ -12,7 +12,7 @@ import {requestLoginFromApi} from "../../APIs";
 import {Actions} from 'react-native-router-flux';
 import LottieView from "lottie-react-native";
 
-class LoginScreen extends Component {
+export class LoginScreen extends Component {
     state = {
         loginStep: 0, //consist of 0=> input email, 1=> input password, 2=> login process
         loginEmail: "",

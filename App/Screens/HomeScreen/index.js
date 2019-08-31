@@ -8,7 +8,7 @@ import {logoutUser} from "../../Redux/actions";
 import {Actions} from 'react-native-router-flux';
 import DialogAlert from "../../Tools/DialogAlert";
 
-class HomeScreen extends Component {
+export class HomeScreen extends Component {
 
     state = {
         repo: "facebook/react-native",

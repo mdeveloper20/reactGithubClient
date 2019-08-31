@@ -28,7 +28,7 @@ import moment from "moment";
 
 
 
-class RepoScreen extends Component {
+export class RepoScreen extends Component {
 
 
     state = {

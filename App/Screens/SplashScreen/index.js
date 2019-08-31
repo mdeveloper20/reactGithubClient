@@ -9,7 +9,7 @@ import {requestLoginFromApi} from "../../APIs";
 import {Actions} from 'react-native-router-flux';
 import LottieView from "lottie-react-native";
 
-class SplashScreen extends Component {
+export class SplashScreen extends Component {
 
 
     async checkUser() {
