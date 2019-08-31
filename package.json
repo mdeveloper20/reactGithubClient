@@ -7,7 +7,7 @@
     "android": "react-native run-android",
     "test": "jest",
     "clean": "cd android && gradlew cleanBuildCache",
-    "build": "cd android && gradlew assmbleRelease"
+    "build": "cd android && gradlew assembleRelease"
   },
   "dependencies": {
     "lottie-ios": "^3.0.3",
