@@ -5,7 +5,7 @@ import styles from "./style"
 import {Image, Text} from 'react-native-elements';
 import Images from "../../Themes/Images";
 import DialogAlert from "../../Tools/DialogAlert";
-import {requrestLoginFromApi} from "../../APIs/loginRequest";
+import {requestLoginFromApi} from "../../APIs";
 import {Actions} from 'react-native-router-flux';
 import LottieView from "lottie-react-native";
 
@@ -18,7 +18,7 @@ class SplashScreen extends Component {
         if (this.props.user.email && this.props.user.password) {
             try {
                 console.log('check the user!')
-                await requrestLoginFromApi(this.props.user.email, this.props.user.password, this.onLoginFailed, this.onLoginSucceed);
+                await requestLoginFromApi(this.props.user.email, this.props.user.password, this.onLoginFailed, this.onLoginSucceed);
 
 
             } catch (error) {

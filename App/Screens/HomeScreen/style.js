@@ -7,14 +7,14 @@ export default StyleSheet.create({
     ...ApplicationStyles.screen,
 
     headText: {
-        fontSize:28,
+        fontSize:Metrics.fonts.xl,
         fontWeight:'bold',
         marginBottom:Metrics.doubleBaseMargin,
 
 
     },
     textLabel:{
-        fontSize:13,
+        fontSize:Metrics.fonts.small,
         fontWeight:'bold',
         width:Metrics.viewWidths.big,
         alignSelf: 'center'

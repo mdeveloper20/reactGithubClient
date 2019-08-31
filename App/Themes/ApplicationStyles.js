@@ -44,7 +44,7 @@ const ApplicationStyles = {
         },
         titleText: {
             ...Fonts.style.h2,
-            fontSize: 14,
+            fontSize:Metrics.fonts.small,
             color: Colors.text
         },
         fullWidthButtons: {

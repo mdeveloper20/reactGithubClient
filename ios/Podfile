@@ -28,6 +28,8 @@ target 'myproj' do
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
 
+  pod 'RNSVG', :path => '../node_modules/react-native-svg'
+
   target 'myprojTests' do
     inherit! :search_paths
     # Pods for testing

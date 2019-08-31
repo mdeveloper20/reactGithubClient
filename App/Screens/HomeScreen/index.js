@@ -6,11 +6,14 @@ import {Button, Image, Input, Text} from 'react-native-elements';
 import Images from "../../Themes/Images";
 import {logoutUser} from "../../Redux/actions";
 import {Actions} from 'react-native-router-flux';
+import DialogAlert from "../../Tools/DialogAlert";
 
 class HomeScreen extends Component {
 
     state = {
-        repo: "facebook/react-native"
+        repo: "facebook/react-native",
+        dialog: null
+
     }
 
     render() {
@@ -52,13 +55,22 @@ class HomeScreen extends Component {
                     />
                 </View>
 
+                {this.state.dialog}
 
             </View>
         )
     }
 
     onSubmitClick = () => {
-        console.log()
+        if(this.state.repo){
+            Actions.repo({selectedRepo:this.state.repo});
+
+        }else{
+            this.setState({
+                dialog: <DialogAlert message="Please enter repository name!"
+                                     onOkPress={this.onDialogOkPress}/>
+            })
+        }
     }
 
     onRepoChange = (repo) => {
@@ -68,6 +80,12 @@ class HomeScreen extends Component {
     onLogoutClick = async () => {
         await this.props.logoutUser();
         Actions.reset('login');
+    }
+
+    onDialogOkPress = () => {
+        this.setState({
+            dialog: null
+        })
     }
 
 }

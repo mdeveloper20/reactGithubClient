@@ -8,7 +8,7 @@ import EmailForm from "./components/EmailForm";
 import PasswordForm from "./components/PasswordForm";
 import DialogAlert from "../../Tools/DialogAlert";
 import {saveUser} from "../../Redux/actions";
-import {requrestLoginFromApi} from "../../APIs/loginRequest";
+import {requestLoginFromApi} from "../../APIs";
 import {Actions} from 'react-native-router-flux';
 import LottieView from "lottie-react-native";
 
@@ -85,7 +85,7 @@ class LoginScreen extends Component {
                 loginStep: 2
             });
 
-            await requrestLoginFromApi(
+            await requestLoginFromApi(
                 loginEmail,
                 loginPassword,
                 this.onLoginFailed,

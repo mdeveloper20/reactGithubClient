@@ -3,7 +3,8 @@ import LoginScreen from './LoginScreen'
 import SplashScreen from './SplashScreen'
 import HomeScreen from './HomeScreen'
 import RepoScreen from './RepoScreen'
-import {Router, Scene, Stack} from "react-native-router-flux";
+
+import {Router, Scene} from "react-native-router-flux";
 import {connect, Provider} from "react-redux";
 import store from "../Redux/store";
 import {ThemeProvider} from "react-native-elements";
@@ -26,7 +27,8 @@ export default class App extends Component {
             <Provider store={store}>
                 <RouterWithRedux>
                     <ThemeProvider >
-                        <Scene hideNavBar={true}  key="home" component={RepoScreen} />
+                        <Scene hideNavBar={true}  key="home" component={HomeScreen} />
+                        <Scene hideNavBar={true}  key="repo" component={RepoScreen} />
 
                         <Scene hideNavBar={true} key="splash" component={SplashScreen} initial/>
                         <Scene hideNavBar={true} key="login" component={LoginScreen} />
