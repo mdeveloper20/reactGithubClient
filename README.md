@@ -23,7 +23,7 @@ Here is list of some libraries that have used in the project:
 
 ### Installation
 
-This application requires [React-Native](https://nodejs.org/) v0.60.5 to run.
+This application requires [React-Native](https://facebook.github.io/react-native/) v0.60.5 to run.
 
 Install the dependencies and devDependencies and start the server.
 
