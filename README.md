@@ -14,6 +14,7 @@ React native demo application that integrated with Github V3 APIs. This project 
 <img src="/screenshots/2.jpg" width="250" align="right" >
 <img src="/screenshots/3.jpg" width="250" align="right" >
   </div>
+  <div style="width:100%;height:20px;clear:both"></div>
 
 
 ### Libraries!
