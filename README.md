@@ -8,7 +8,7 @@ React native demo application that integrated with Github V3 APIs. This project 
 
   - Login into your Github account(Basic Authentication)
   - Show repository commits list
-
+### ScreenShots
 
 ### Libraries!
 
@@ -29,7 +29,8 @@ This application requires [React-Native](https://facebook.github.io/react-native
 Install the dependencies and devDependencies and start the server.
 
 ```sh
-$ cd project
+$ git clone https://github.com/mdeveloper20/reactGithubClient.git
+$ cd reactGithubClient
 $ npm install
 $ react-native run-android or run-ios
 ```
