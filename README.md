@@ -9,6 +9,8 @@ React native demo application that integrated with Github V3 APIs. This project 
   - Login into your Github account(Basic Authentication)
   - Show repository commits list
 ### ScreenShots
+![Alt text](/screenshots/1.git?raw=true "App")
+
 ![Alt text](/screenshots/1.png?raw=true "Login Page")
 ![Alt text](/screenshots/2.png?raw=true "Home Page")
 ![Alt text](/screenshots/3.png?raw=true "Login Page")
