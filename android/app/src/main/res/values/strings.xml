@@ -1,3 +1,4 @@
 <resources>
+	<string moduleConfig="true" name="reactNativeCodePush_androidDeploymentKey">cVOH0OmjFAzLCq3-vyaj0sVEoPST19d5851a-2092-43e8-8ddb-1bfc90f2e403</string>
     <string name="app_name">MyGit</string>
 </resources>

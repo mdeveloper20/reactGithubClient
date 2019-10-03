@@ -8,7 +8,7 @@ import {Router, Scene} from "react-native-router-flux";
 import {connect, Provider} from "react-redux";
 import store from "../Redux/store";
 import {ThemeProvider} from "react-native-elements";
-
+import codePush from "react-native-code-push";
 /**
  * Provides an entry point into our application.  Both index.ios.js and index.android.js
  * call this component first.
@@ -18,7 +18,13 @@ import {ThemeProvider} from "react-native-elements";
  *
  * We separate like this to play nice with React Native's hot reloading.
  */
-export default class App extends Component {
+class App extends Component {
+
+    componentDidMount() {
+        codePush.sync({
+            installMode: codePush.InstallMode.IMMEDIATE
+        })
+    }
 
     render() {
         const RouterWithRedux = connect()(Router);
@@ -41,3 +47,9 @@ export default class App extends Component {
     }
 }
 
+let codePushOptions = {
+    checkFrequency: codePush.CheckFrequency.ON_APP_START,
+    installMode:codePush.InstallMode.IMMEDIATE
+}
+
+export default App= codePush(codePushOptions)(App)
