@@ -73,7 +73,7 @@ jobs:
           name: fastlane build android apk
           command: |
             mkdir -p test-results/fastlane
-            bundle exec fastlane build_android_app
+            bundle exec fastlane android deploy
             ls fastlane/
             #mv fastlane/report.xml test-results/fastlane
       - store_test_results:
