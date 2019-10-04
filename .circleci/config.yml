@@ -1,7 +1,7 @@
 version: 2
 jobs:
   node:
-    working_directory: ~/demo-react-native
+    working_directory: ~/my-git
     docker:
       - image: circleci/node:8
     steps:
@@ -34,7 +34,7 @@ jobs:
       #       JEST_JUNIT_OUTPUT: test-results/jest/junit.xml
 
       - persist_to_workspace:
-          root: ~/demo-react-native
+          root: ~/my-git
           paths:
             - node_modules
 
@@ -45,18 +45,15 @@ jobs:
           path: test-results
 
   android:
-    working_directory: ~/demo-react-native/android
+    working_directory: ~/my-git/android
     docker:
       - image: circleci/android:api-28-node8-alpha
     steps:
       - checkout:
-          path: ~/demo-react-native
+          path: ~/my-git
 
       - attach_workspace:
-          at: ~/demo-react-native
-
-      - restore_cache:
-          key: bundle-v1-{{ checksum "Gemfile.lock" }}-{{ arch }}
+          at: ~/my-git
 
       - run:
           name: chmod permissions
@@ -64,10 +61,6 @@ jobs:
 
       - run: bundle install
 
-      - save_cache:
-          key: bundle-v1-{{ checksum "Gemfile.lock" }}-{{ arch }}
-          paths:
-            - vendor/bundle
 
       - run:
           name: fastlane build android apk
@@ -76,23 +69,15 @@ jobs:
             bundle exec fastlane android deploy
             ls fastlane/
             #mv fastlane/report.xml test-results/fastlane
-      - run:
-          name: check apk exists
-          command: |
-            ls app/build/outputs/apk/release
+  
       - store_artifacts:
           path: app/build/outputs/apk/release/app-release.apk
             
-      - store_test_results:
-          path: test-results
-
-      - store_artifacts:
-          path: test-results
 
   ios:
     macos:
       xcode: "9.0"
-    working_directory: ~/demo-react-native
+    working_directory: ~/my-git
 
     # use a --login shell so our "set Ruby version" command gets picked up for later steps
     shell: /bin/bash --login -o pipefail
