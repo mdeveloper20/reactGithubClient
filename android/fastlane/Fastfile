@@ -20,15 +20,15 @@ platform :android do
     # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
   end
 
-  desc "Runs all the tests"
-  lane :test do
-    gradle(task: "test")
-  end
+  # desc "Runs all the tests"
+  # lane :test do
+  #   gradle(task: "test")
+  # end
 
   desc "Submit a new Beta Build to Crashlytics Beta"
   lane :beta do
     gradle(task: "assembleRelease")
-    crashlytics
+    # crashlytics
 
     # sh "your_script.sh"
     # You can also use other beta testing services here
@@ -37,7 +37,7 @@ platform :android do
   desc "Deploy a new version to the Google Play"
   lane :deploy do
     gradle(task: "assembleRelease")
-    supply
+    # supply
   end
 
   # You can define as many lanes as you want
