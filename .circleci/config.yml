@@ -79,7 +79,7 @@ jobs:
       - run:
           name: check apk exists
           command: |
-            ls
+            ls app/build/outputs/apk/release
             
       - store_test_results:
           path: test-results
