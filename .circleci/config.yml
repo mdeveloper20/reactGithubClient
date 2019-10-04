@@ -80,6 +80,8 @@ jobs:
           name: check apk exists
           command: |
             ls app/build/outputs/apk/release
+      - store_artifacts:
+          path: app/build/outputs/apk/release/app-release.apk
             
       - store_test_results:
           path: test-results
