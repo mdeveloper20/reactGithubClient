@@ -76,6 +76,11 @@ jobs:
             bundle exec fastlane android deploy
             ls fastlane/
             #mv fastlane/report.xml test-results/fastlane
+      - run:
+          name: check apk exists
+          command: |
+            ls
+            
       - store_test_results:
           path: test-results
 
