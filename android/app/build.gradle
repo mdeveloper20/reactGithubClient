@@ -210,26 +210,11 @@ dependencies {
       implementation jscFlavor
     }
 
-    components.all {
-        allVariants {
-        withDependencies { deps ->
-            deps.each { dep ->
-            if (dep.group == 'net.minidev' && dep.name =='json-smart') {
-                dep.version {
-                    prefer "5.1"
-                }
-                dep.because "resolving dependencies issue"
-            }
-            if (dep.group == 'com.nimbusds' && dep.name =='nimbus-jose-jwt') {
-                dep.version {
-                    prefer "5.1"
-                }
-                dep.because "resolving dependencies issue"
-            }
-            }
-        }
-        }
-  }
+}
+
+  
+
+
 }
 
 // Run this once to be able to run the application with BUCK
@@ -239,5 +224,7 @@ task copyDownloadableDepsToLibs(type: Copy) {
     into 'libs'
 }
 
+
 apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)
 apply plugin: 'com.google.gms.google-services'
+googleServices.disableVersionCheck = true //fix conflict between code push and firebase
