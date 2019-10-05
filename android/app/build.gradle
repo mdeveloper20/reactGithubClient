@@ -216,13 +216,13 @@ dependencies {
             deps.each { dep ->
             if (dep.group == 'net.minidev' && dep.name =='json-smart') {
                 dep.version {
-                    prefer "2.3"
+                    prefer "5.1"
                 }
                 dep.because "resolving dependencies issue"
             }
             if (dep.group == 'com.nimbusds' && dep.name =='nimbus-jose-jwt') {
                 dep.version {
-                    prefer "2.3"
+                    prefer "5.1"
                 }
                 dep.because "resolving dependencies issue"
             }
