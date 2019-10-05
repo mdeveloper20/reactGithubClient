@@ -220,6 +220,12 @@ dependencies {
                 }
                 dep.because "resolving dependencies issue"
             }
+            if (dep.group == 'com.nimbusds' && dep.name =='nimbus-jose-jwt') {
+                dep.version {
+                    prefer "2.3"
+                }
+                dep.because "resolving dependencies issue"
+            }
             }
         }
         }
