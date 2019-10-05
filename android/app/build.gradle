@@ -209,6 +209,21 @@ dependencies {
     } else {
       implementation jscFlavor
     }
+
+    components.all {
+        allVariants {
+        withDependencies { deps ->
+            deps.each { dep ->
+            if (dep.group == 'net.minidev' && dep.name =='json-smart') {
+                dep.version {
+                    prefer "2.3"
+                }
+                dep.because "resolving dependencies issue"
+            }
+            }
+        }
+        }
+  }
 }
 
 // Run this once to be able to run the application with BUCK
