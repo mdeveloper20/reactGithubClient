@@ -81,7 +81,7 @@ async createNotificationListeners() {
       { cancelable: false },
     );
   }
-  }
+  
 
     async checkPermission() {
         const enabled = await firebase.messaging().hasPermission();
