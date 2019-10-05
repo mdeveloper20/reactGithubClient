@@ -31,6 +31,9 @@ target 'myproj' do
   pod 'RNSVG', :path => '../node_modules/react-native-svg'
 
   pod 'CodePush', :path => '../node_modules/react-native-code-push'
+  pod 'Firebase/Analytics'
+
+  pod 'RNFirebase', :path => '../node_modules/react-native-firebase'
 
   target 'myprojTests' do
     inherit! :search_paths

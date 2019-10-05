@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "934151871564",
+    "firebase_url": "https://my-git-android.firebaseio.com",
+    "project_id": "my-git-android",
+    "storage_bucket": "my-git-android.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:934151871564:android:1591444452f54af100a8e9",
+        "android_client_info": {
+          "package_name": "com.mygit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "934151871564-jhmt67lkg6l4l6vgcs8eh7g6mb964pjk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFibGoE40I4sdTKucyn6L4V7_EEc0F3tA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "934151871564-jhmt67lkg6l4l6vgcs8eh7g6mb964pjk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

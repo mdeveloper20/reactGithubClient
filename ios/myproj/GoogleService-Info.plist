@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>934151871564-gh3t08k5lq5hssr3sc2mejihd9f1r1l0.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.934151871564-gh3t08k5lq5hssr3sc2mejihd9f1r1l0</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB0HEMt5-uYhdCmFPmSsx9wXdDZroOJXxc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>934151871564</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.mygitios</string>
+	<key>PROJECT_ID</key>
+	<string>my-git-android</string>
+	<key>STORAGE_BUCKET</key>
+	<string>my-git-android.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:934151871564:ios:09cda20cbc66123e00a8e9</string>
+	<key>DATABASE_URL</key>
+	<string>https://my-git-android.firebaseio.com</string>
+</dict>
+</plist>
