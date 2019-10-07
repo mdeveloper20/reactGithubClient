@@ -1,4 +1,4 @@
-package com.chatty.hello;
+package com.myproj;
 
 import com.facebook.react.ReactActivity;
 

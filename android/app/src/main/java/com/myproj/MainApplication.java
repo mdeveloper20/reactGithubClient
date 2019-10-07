@@ -1,4 +1,4 @@
-package com.chatty.hello;
+package com.myproj;
 
 import android.app.Application;
 import android.util.Log;
