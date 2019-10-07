@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:934151871564:android:2967bcbf57971a0a00a8e9",
         "android_client_info": {
-          "package_name": "com.myproj"
+          "package_name": "com.chatty.hello"
         }
       },
       "oauth_client": [
@@ -18,7 +18,7 @@
           "client_id": "934151871564-cjft1rvdkr5jpjacqqufj828h70iqj6l.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.myproj",
+            "package_name": "com.chatty.hello",
             "certificate_hash": "3426e57fb9c3c83e731bc922fee5117cfdcf5085"
           }
         },
