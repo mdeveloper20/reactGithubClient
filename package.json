@@ -14,7 +14,7 @@
     "jetifier": "^1.6.4",
     "lottie-ios": "^3.0.3",
     "lottie-react-native": "^3.1.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "prop-types": "latest",
     "react": "16.8.6",
     "react-moment": "^0.9.2",
